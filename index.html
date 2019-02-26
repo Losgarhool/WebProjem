@@ -1,36 +1,151 @@
 <!DOCTYPE html>
-<html >
+<html>
 <head>
-	<meta charset="UTF-8">
-	<title> HAKKIMIZDA</title>
-	<link rel="stylesheet"href="style.css">
-	<style type="text/css">
-		.deneme{
+	<meta charset="utf-8">
+	<title> ANA SAYFA</title>
+	<link rel="stylesheet" href="style.css">
 
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body {font-family: "Lato", sans-serif;}
 
-		}
+.tablink {
+  background-color: #555;
+  color: white;
+  float: left;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 14px 16px;
+  font-size: 17px;
+  width: 25%;
+}
 
-		.deneme img:hover{
-			position: relative;
-			right: -10px;
-		}
+.tablink:hover {
+  background-color: #777;
+}
 
+/* Style the tab content */
+.tabcontent {
+  color: white;
+  display: none;
+  padding: 50px;
+  text-align: center;
+}
 
-	</style>
+#London {background-color:red;}
+#Paris {background-color:green;}
+#Tokyo {background-color:blue;}
+#Oslo {background-color:orange;}
+</style>
 </head>
-<body background="http://jmd.im/black_wallpapers/I/desktop/BLACK_I_desktop-1.jpg">
-	<H1 align="center" style="color:Yellow">BİLGİSAYAR TEKNOLOJİLERİ BÖLÜMÜ </H1>
+<body>
 
-<div class="deneme">
-<marquee scrollamount="50">
- 
-<img src="https://i.pinimg.com/originals/d8/21/ed/d821ed05984a8ebda0b39c73ead89f8d.png" width="300px" height="300px">
-<img src="https://i.pinimg.com/originals/de/fe/73/defe734a19ebb29c0744574c05686a50.jpg" width="300px" height="300px">
-<img src="https://readytricks.com/wp-content/uploads/2018/05/stunning-cool-desktop-background.jpg" height="300px">
+<p>Click on the buttons inside the tabbed menu:</p>
 
- 
-</marquee>
+<div id="London" class="tabcontent">
+  <h1>London</h1>
+  <p>London is the capital city of England.</p>
 </div>
+
+<div id="Paris" class="tabcontent">
+  <h1>Paris</h1>
+  <p>Paris is the capital of France.</p> 
+</div>
+
+<div id="Tokyo" class="tabcontent">
+  <h1>Tokyo</h1>
+  <p>Tokyo is the capital of Japan.</p>
+</div>
+
+<div id="Oslo" class="tabcontent">
+  <h1>Oslo</h1>
+  <p>Oslo is the capital of Norway.</p>
+</div>
+
+<button class="tablink" onclick="openCity('London', this, 'red')" id="defaultOpen">London</button>
+<button class="tablink" onclick="openCity('Paris', this, 'green')">Paris</button>
+<button class="tablink" onclick="openCity('Tokyo', this, 'blue')">Tokyo</button>
+<button class="tablink" onclick="openCity('Oslo', this, 'orange')">Oslo</button>
+
+<script>
+function openCity(cityName,elmnt,color) {
+  var i, tabcontent, tablinks;
+  tabcontent = document.getElementsByClassName("tabcontent");
+  for (i = 0; i < tabcontent.length; i++) {
+    tabcontent[i].style.display = "none";
+  }
+  tablinks = document.getElementsByClassName("tablink");
+  for (i = 0; i < tablinks.length; i++) {
+    tablinks[i].style.backgroundColor = "";
+  }
+  document.getElementById(cityName).style.display = "block";
+  elmnt.style.backgroundColor = color;
+
+}
+// Get the element with id="defaultOpen" and click on it
+document.getElementById("defaultOpen").click();
+</script>
+   <div class="slideshow-container">
+
+<div class="mySlides fade">
+  <div class="numbertext">1 / 3</div>
+  <img src="https://panel.gelisim.edu.tr/assets/2018/resimler/iguwebsite/dsc_0079_ab853c94c09441ab9c12ad11bd0e9b88.jpg" style="width:100%">
+  <div class="text">Caption Text</div>
+</div>
+
+<div class="mySlides fade">
+  <div class="numbertext">2 / 3</div>
+  <img src="https://panel.gelisim.edu.tr/assets/2018/resimler//c7141b30b59c4819950328c9e69299a5_f3bc92c2a8304b3cb1f117e34e72d8e5.jpg" style="width:100%">
+  <div class="text">Caption Two</div>
+</div>
+
+<div class="mySlides fade">
+  <div class="numbertext">3 / 3</div>
+  <img src="https://scontent-ams3-1.cdninstagram.com/vp/6a5e28d5799c72bb80b49378d0fcdb99/5CEED425/t51.2885-15/e35/42475700_730597877315926_2025354491689471553_n.jpg?_nc_ht=scontent-ams3-1.cdninstagram.com&se=7&ig_cache_key=MTg3ODQ0NzU4OTc2NDMxNTcxNw%3D%3D.2.jpg" style="width:100%">
+  <div class="text">Caption Three</div>
+</div>
+
+<a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+<a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+</div>
+<br>
+
+<div style="text-align:center">
+  <span class="dot" onclick="currentSlide(1)"></span> 
+  <span class="dot" onclick="currentSlide(2)"></span> 
+  <span class="dot" onclick="currentSlide(3)"></span> 
+</div>
+
+<script>
+var slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("dot");
+  if (n > slides.length) {slideIndex = 1}    
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";  
+  }
+  for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";  
+  dots[slideIndex-1].className += " active";
+}
+</script>
 
 </body>
 </html>
