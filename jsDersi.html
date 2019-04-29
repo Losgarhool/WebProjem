@@ -1,0 +1,448 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Javascript Dersleri</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+}
+#myBtn {
+  display: none;
+  position: fixed;
+  bottom: 20px;
+  right: 30px;
+  z-index: 99;
+  font-size: 18px;
+  border: none;
+  outline: none;
+  background-color: red;
+  color: white;
+  cursor: pointer;
+  padding: 15px;
+  border-radius: 4px;
+}
+
+#myBtn:hover {
+  background-color: #555;
+}
+
+/* Style the header */
+.header {
+  padding: 80px;
+  text-align: center;
+  color: black;
+  background-image:url(Javascript.png);
+  height: 400px;
+
+}
+.header:hover{
+   height: 600px;
+ }
+
+/* Increase the font size of the h1 element */
+.header h1 {
+  font-size: 40px;  
+  color: #f9dc3d;
+  background-color: black;
+  border-style: solid;
+  border-width: 2px;
+}
+.header p{
+ font-size: 40px;  
+  color: #f9dc3d;
+  background-color: black;
+  border-style: solid;
+  border-width: 2px;
+}
+.fa {
+  padding: 20px;
+  font-size: 30px;
+  width: 50px;
+  height: 50px;
+  text-align: center;
+  text-decoration: none;
+  margin: 5px 2px;
+}
+
+.fa:hover {
+    opacity: 0.7;
+}
+
+.fa-facebook {
+  background: #3B5998;
+  color: white;
+}
+
+.fa-twitter {
+  background: #55ACEE;
+  color: white;
+}
+.fa-instagram {
+  background: #125688;
+  color: white;
+}
+
+
+/* Style the top navigation bar */
+.navbar {
+  overflow: hidden;
+  background-color: #333;
+}
+
+/* Style the navigation bar links */
+.navbar a {
+  float: left;
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 20px;
+  text-decoration: none;
+}
+
+/* Right-aligned link */
+.navbar a.right {
+  float: right;
+}
+
+/* Change color on hover */
+.navbar a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+/* Column container */
+.row {  
+  display: flex;
+  flex-wrap: wrap;
+}
+
+/* Create two unequal columns that sits next to each other */
+/* Sidebar/left column */
+.side {
+  flex: 30%;
+  background-color: #f1f1f1;
+  padding: 20px;
+}
+
+/* Main column */
+.main {   
+  flex: 70%;
+  background-color: lightgrey;
+  border-style: solid;
+  padding: 20px;
+  margin: 30px;
+}
+
+/* Fake image, just for this example */
+.fakeimg {
+  background-color: #aaa;
+  width: 100%;
+  padding: 20px;
+}
+
+/* Footer */
+.footer {
+  padding: 20px;
+  text-align: center;
+  background: #ddd;
+}
+
+/* Responsive layout - when the screen is less than 700px wide, make the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 700px) {
+  .row {   
+    flex-direction: column;
+  }
+}
+
+/* Responsive layout - when the screen is less than 400px wide, make the navigation links stack on top of each other instead of next to each other */
+@media screen and (max-width: 400px) {
+  .navbar a {
+    float: none;
+    width:100%;
+  }
+}
+.definition{
+  font-size:16px;
+  color:#013f45
+  background-color:grey;
+}
+.header1 {
+  position: fixed;
+  top: 0;
+  z-index: 1;
+  width: 100%;
+  background-color: #f1f1f1;
+}
+
+.header1 h2 {
+  text-align: center;
+}
+
+.progress-container {
+  width: 100%;
+  height: 8px;
+  background: #ccc;
+  position: fixed;
+}
+
+.progress-bar {
+  height: 8px;
+  background: black;
+  width: 0%;
+}
+
+.content1 {
+  padding: 500px; 0;
+  margin: 50px auto 0 auto;
+  width: 250px;
+}
+.card {
+  /* Add shadows to create the "card" effect */
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,1);
+  transition: 0.3s;
+  width: 250px;
+  margin: auto;
+}
+
+/* On mouse-over, add a deeper shadow */
+.card:hover {
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,10);
+  width: 250px;
+}
+
+/* Add some padding inside the card container */
+.container {
+  padding: 2px 16px;
+}
+.w3-example {
+    border-radius: 4px;
+    background-color: #474949;
+    color: #ffffff;
+    padding: 0.01em 16px;
+    margin: 20px 0;
+  margin-bottom: 30px;
+    box-shadow: 0 2px 4px 0 rgba(0,0,0,0.16),0 2px 10px 0 rgba(0,0,0,0.12)!important;
+}
+
+.w3-section, .w3-code {
+    margin-top: 16px!important;
+    margin-bottom: 16px!important;
+}
+.w3-code {
+    width: auto;
+    color: #000000;
+    background-color: #fff;
+    padding: 8px 12px;
+    border-left: 4px solid #fff334;
+    word-wrap: break-word;
+}
+.w3-code, .w3-codespan {
+    font-family: Verdana, Arial;
+    font-size: 16px;
+}
+</style>
+</head>
+<body>
+    <div class="header1">
+  <div class="progress-container">
+    <div class="progress-bar" id="myBar"></div>
+  </div>  
+</div>
+
+<div class="header">
+  <h1>Javascript Dersleri</h1>
+  <p>Javascript Deslerine başlıyoruz !</p>
+</div>
+<div class="navbar">
+  <a href="girisSayfasi.html">Anasayfa</a>
+  <a href="htmlDersi.html">HTML Dersleri</a>
+  <a href="cssDersi.html">CSS Dersleri</a>
+  <a href="hobilerim.html" class="right">Benim Hakkımda</a>
+</div>
+ <div class="main">
+  <h1>JavaScript Kod Yapısı</h1>
+
+     <b>NOT:</b> JavaScript kullanabilmek için öncelikle <a href="http://html.sitesi.web.tr/">HTML Dili</a> bilmeniz gereklidir!<br /><br />
+
+   JavaScript kodları HTML belgesi içerisinde kullanılır. Kod yazımına başlamadan önce <b>&lt;script&gt;</b> nesnesi eklenir ve kod yazma işlemi bittikten sonra <b>&lt;/script&gt;</b> yazılarak element kapatılır.<br /><br />
+
+<div class="w3-example">
+<h3><span class="glyphicon glyphicon-pencil" style="font-size: 20px;"></span> JAVASCRIPT Kodu</h3>
+<div class="w3-code">
+<pre><code class="javascript"> &lt;script&gt;
+&nbsp;&nbsp;&nbsp;alert('Hoş&nbsp;geldiniz!');
+&lt;/script&gt;
+</code></pre>
+</div>
+</div>
+
+   <h2>Javascript HTML Belgesinin Neresinde Kullanılır?</h2>
+   
+   Bir JavaScript kodu için oluşturacağınız &lt;script&gt;&lt;/script&gt; nesnesini <b>&lt;head&gt;</b> bölümünde ya da <b>&lt;body&gt;</b> bölümünde kullanabilirsiniz.</b></b><br /><br />
+
+   <b>NOT:</b> BODY elementi içerisinde kullanmak sayfa yüklenme hızını arttıracaktır.<br /><br />
+
+   Aşağıdaki örnek HEAD bölümünde JavaScript kullanılarak yapılmıştır;<br /><br />
+
+   <div class="code1">JavaScript Kodu<br /> <div class="code2">
+
+   </div></div><br />
+
+   Aşağıdaki örnek ise JavaScript kodunun BODY içerisinde kullanılmasıyla oluşturulmuştur:<br /><br />
+
+<div class="w3-example">
+<h3><span class="glyphicon glyphicon-pencil" style="font-size: 20px;"></span> JAVASCRIPT Kodu</h3>
+<div class="w3-code">
+<pre><code class="javascript">&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+&lt;script&gt;
+function fonksiyonum() {
+    document.getElementById("demo").innerHTML = "Paragraf değişti!";
+}
+&lt;/script&gt;
+&lt;/head&gt;
+
+&lt;body&gt;
+
+&lt;h1&gt;Web Sayfam&lt;/h1&gt;
+
+&lt;p id="demo"&gt;Bir paragraf&lt;/p&gt;
+
+&lt;button type="button" onclick="fonksiyonum()"&gt;Butona Bas!&lt;/button&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+</div>
+</div>
+
+   <h2>JavaScript Kodlarını Dosyadan Kullanma</h2>
+
+   İsterseniz bir javascript dosyası oluşturarak ve bunu HTML belgenizden çağırarak kullanabilirsiniz. Bu kullanım şekli kaynak kodlarınızın sade olmasını sağlayacaktır.<br /><br />
+
+   Bunun için &lt;script&gt; kodunuza src="" özelliği ekleyip dosya adını ana dizine göre belirtin. Örneğin script dosyamızın adı "script.js" ise;<br /><br />
+
+<div class="w3-example">
+<h3><span class="glyphicon glyphicon-pencil" style="font-size: 20px;"></span> JAVASCRIPT Kodu</h3>
+<div class="w3-code">
+<pre><code class="javascript">&lt;script&nbsp;src="script.js"&gt;&lt;/script&gt;
+</code></pre>
+</div>
+</div>
+<h1>JavaScript İfadeleri</h1>
+
+  JavaScript ile kodlama yaparken JavaScript ifadelerinden faydalanılırız. Bu kodlar yazılırken ifadeler <b>noktalı virgül (;)</b> ile biter.<br/><br/>
+
+<div class="w3-example">
+<h3><span class="glyphicon glyphicon-pencil" style="font-size: 20px;"></span> JAVASCRIPT Kodu</h3>
+<div class="w3-code">
+<pre><code class="javascript">&nbsp;&nbsp;&nbsp;a&nbsp;=&nbsp;5;
+&nbsp;&nbsp;&nbsp;b&nbsp;=&nbsp;6;
+&nbsp;&nbsp;&nbsp;c&nbsp;=&nbsp;a&nbsp;+&nbsp;b;
+</code></pre>
+</div>
+</div>
+
+JavaScript ifadelerinin tamamı noktalı virgül ile bitmez. IF, FUNCTION, FOR, DO gibi bazı ifadeler, ifade grupları oluşturmaya yarar. Bu tarz ifade grupları oluştururken kıvrımlı parantez kullanılır.<br/><br/>
+
+<div class="w3-example">
+<h3><span class="glyphicon glyphicon-pencil" style="font-size: 20px;"></span> JAVASCRIPT Kodu</h3>
+<div class="w3-code">
+<pre><code class="javascript">function&nbsp;fonksiyonum()&nbsp;{
+&nbsp;&nbsp;&nbsp;document.getElementById("link1").innerHTML&nbsp;=&nbsp;"Bağlantı&nbsp;1";
+&nbsp;&nbsp;&nbsp;document.getElementById("link2").innerHTML&nbsp;=&nbsp;"Bağlantı&nbsp;2";
+}
+</code></pre>
+</div>
+</div>
+
+Bazen kodlama yaparken hatırlatma ya da bilgilendirme amaçlı yazılar yazmamız gerekebilir. JavaScript buna izin verir. Bunun için tek satırlık ifadelerde // birden fazla satırlı ifadelerde ise /* ... */ kullanılır. Örneği inceleyin;<br/><br />
+
+<div class="w3-example">
+<h3><span class="glyphicon glyphicon-pencil" style="font-size: 20px;"></span> JAVASCRIPT Kodu</h3>
+<div class="w3-code">
+<pre><code class="javascript">&lt;div&nbsp;id="sonuc"&gt;&lt;/div&gt;
+
+&lt;script&gt;
+
+&nbsp;&nbsp;&nbsp;//&nbsp;a'nın&nbsp;değerini&nbsp;5&nbsp;yaparız.
+&nbsp;&nbsp;&nbsp;var&nbsp;a&nbsp;=&nbsp;5;
+
+&nbsp;&nbsp;&nbsp;//&nbsp;b'nin&nbsp;değerini&nbsp;ise&nbsp;6&nbsp;yaparız.
+&nbsp;&nbsp;&nbsp;var&nbsp;b&nbsp;=&nbsp;6;
+
+&nbsp;&nbsp;&nbsp;/*
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;a&nbsp;ve&nbsp;b&nbsp;değişkenlerini&nbsp;toplarsak
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;5&nbsp;+&nbsp;6&nbsp;=&nbsp;11&nbsp;eder.&nbsp;Bunu&nbsp;paragrafa
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;yazdıralım.
+&nbsp;&nbsp;&nbsp;*/
+&nbsp;&nbsp;&nbsp;var&nbsp;c&nbsp;=&nbsp;a&nbsp;+&nbsp;b;
+&nbsp;&nbsp;&nbsp;document.getElementById("sonuc").innerHTML&nbsp;=&nbsp;c;
+
+&lt;/script&gt;
+</code></pre>
+</div>
+</div>
+
+JavaScript ifadelerini yazarken ifade, değişken ve değerler arası boşluk bırakabilir ya da bunları bitişik yazabiliriz. Aşağıdaki örnekte belirtilen her iki ifade de aynıdır.<br /><br />
+
+<div class="w3-example">
+<h3><span class="glyphicon glyphicon-pencil" style="font-size: 20px;"></span> JAVASCRIPT Kodu</h3>
+<div class="w3-code">
+<pre><code class="javascript">kisi&nbsp;=&nbsp;"Murat";
+kisi="Murat";
+</code></pre>
+</div>
+</div>
+<div class="card">
+  <img src="foto2.jpg" alt="Avatar" style="width:250px; height: 250px;">
+  <div class="container">
+    <h4><b>Muhammed Aktan</b></h4> 
+    <p>Website designer</p> 
+  </div>
+</div>
+</div>
+<div class="footer">
+<h2><a href="https://www.facebook.com/muhammet.aktan" class="fa fa-facebook"></a>
+<a href="https://twitter.com/yessaykonocry" class="fa fa-twitter"></a>
+<a href="https://instagram.com/leaderofarmy" class="fa fa-instagram"></a></h2>
+</div>
+<button onclick="topFunction()" id="myBtn" title="Go to top">Başa Dön</button>
+<script>
+// When the user scrolls the page, execute myFunction 
+window.onscroll = function() {myFunction()};
+
+function myFunction() {
+  var winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+  var height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+  var scrolled = (winScroll / height) * 100;
+  document.getElementById("myBar").style.width = scrolled + "%";
+}
+// When the user scrolls down 20px from the top of the document, show the button
+window.onscroll = function() {scrollFunction()};
+
+function scrollFunction() {
+  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+    document.getElementById("myBtn").style.display = "block";
+  } else {
+    document.getElementById("myBtn").style.display = "none";
+  }
+}
+
+// When the user clicks on the button, scroll to the top of the document
+function topFunction() {
+  document.body.scrollTop = 0;
+  document.documentElement.scrollTop = 0;
+}
+</script>
+</body>
+</html>

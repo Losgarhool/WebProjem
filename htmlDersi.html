@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>HTML Dersleri</title>
+<meta charset="UTF-8">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+}
+#myBtn {
+  display: none;
+  position: fixed;
+  bottom: 20px;
+  right: 30px;
+  z-index: 99;
+  font-size: 18px;
+  border: none;
+  outline: none;
+  background-color: red;
+  color: white;
+  cursor: pointer;
+  padding: 15px;
+  border-radius: 4px;
+}
+
+#myBtn:hover {
+  background-color: #555;
+}
+
+/* Style the header */
+.header {
+  padding: 80px;
+  text-align: center;
+  color: black;
+  background-image:url(html1.jpg);
+
+}
+.header:hover{
+   height: 600px;
+ }
+
+/* Increase the font size of the h1 element */
+.header h1 {
+  font-size: 40px;  
+  background-color: lightgrey;
+  border-style: solid;
+  border-width: 2px;
+}
+.header p{
+    font-size: 40px;  
+  background-color: lightgrey;
+  border-style: solid;
+  border-width: 2px;
+}
+
+/* Style the top navigation bar */
+.navbar {
+  overflow: hidden;
+  background-color: #333;
+}
+
+/* Style the navigation bar links */
+.navbar a {
+  float: left;
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 20px;
+  text-decoration: none;
+}
+
+/* Right-aligned link */
+.navbar a.right {
+  float: right;
+}
+
+/* Change color on hover */
+.navbar a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+/* Column container */
+.row {  
+  display: flex;
+  flex-wrap: wrap;
+}
+
+/* Create two unequal columns that sits next to each other */
+/* Sidebar/left column */
+.side {
+  flex: 30%;
+  background-color: #f1f1f1;
+  padding: 20px;
+}
+
+/* Main column */
+.main {   
+  flex: 70%;
+  background-color: lightgrey;
+  border-style: solid;
+  padding: 20px;
+  margin: 30px;
+}
+
+/* Fake image, just for this example */
+.fakeimg {
+  background-color: #aaa;
+  width: 100%;
+  padding: 20px;
+}
+
+/* Footer */
+.footer {
+  padding: 20px;
+  text-align: center;
+  background: #ddd;
+}
+
+/* Responsive layout - when the screen is less than 700px wide, make the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 700px) {
+  .row {   
+    flex-direction: column;
+  }
+}
+
+/* Responsive layout - when the screen is less than 400px wide, make the navigation links stack on top of each other instead of next to each other */
+@media screen and (max-width: 400px) {
+  .navbar a {
+    float: none;
+    width:100%;
+  }
+}
+.definition{
+  font-size:16px;
+  color:#013f45
+  background-color:grey;
+}
+.header1 {
+  position: fixed;
+  top: 0;
+  z-index: 1;
+  width: 100%;
+  background-color: #f1f1f1;
+}
+
+.header1 h2 {
+  text-align: center;
+}
+
+.progress-container {
+  width: 100%;
+  height: 8px;
+  background: #ccc;
+  position: fixed;
+}
+
+.progress-bar {
+  height: 8px;
+  background: black;
+  width: 0%;
+}
+
+.content1 {
+  padding: 500px; 0;
+  margin: 50px auto 0 auto;
+  width: 250px;
+}
+.card {
+  /* Add shadows to create the "card" effect */
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,1);
+  transition: 0.3s;
+  width: 250px;
+  margin: auto;
+}
+
+/* On mouse-over, add a deeper shadow */
+.card:hover {
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,10);
+  width: 250px;
+}
+
+/* Add some padding inside the card container */
+.container {
+  padding: 2px 16px;
+}
+.fa {
+  padding: 20px;
+  font-size: 30px;
+  width: 50px;
+  height: 50px;
+  text-align: center;
+  text-decoration: none;
+  margin: 5px 2px;
+}
+
+.fa:hover {
+    opacity: 0.7;
+}
+
+.fa-facebook {
+  background: #3B5998;
+  color: white;
+}
+
+.fa-twitter {
+  background: #55ACEE;
+  color: white;
+}
+.fa-instagram {
+  background: #125688;
+  color: white;
+}
+
+</style>
+</head>
+<body>
+ 
+<div class="header">
+ <h1>HTML Dersleri</h1>
+<p>HTML Deslerine başlıyoruz !</p>
+</div>
+
+<div class="navbar">
+  <div class="header1">
+<div class="progress-container">
+    <div class="progress-bar" id="myBar"></div>
+  </div>  
+</div>
+  <a href="girisSayfasi.html">Anasayfa</a>
+  <a href="cssDersi.html">CSS Dersleri</a>
+  <a href="jsDersi.html">Javascript Dersleri</a>
+  <a href="hobilerim.html" class="right">Benim Hakkımda</a>
+</div>
+ <div class="main">
+    <h2>HTML Dersi, İLK Ders !</h2>
+    <h5>Title description, Dec 7, 2017</h5>
+<p>Bu dersimizde web teknolojilerinde kullanılan ve bir kısmını yakından bildiğiniz, bir kısmına aşina olduğunuz ve bir kısmını ise daha önce hiç duymadığınızı tahmin ettiğim kavramları öğrenmekle başlayacağız. Ama önce sizden iki isteğim olacak. Google Chrome ya da Apple Safari dışında bir tarayıcı kullanıyorsanız lütfen <a href="http://www.google.com/intl/tr/chrome/browser/?hl=tr" target="_blank">Google Chrome</a>'u kullanmaya başlayın. Çünkü bu siteyi sadece Chrome için tasarladım. Neden Chrome ve Safari olduğunu önümüzdeki derslerde açıklayacağım. Ayrıca bu siteyi WordPress gibi bir blog sisteminde de hazırlayabilirdim. Benim için daha kolay olurdu; fakat istediğim çalışma alanını WordPress'te bulamadığım için bu sitenin tüm tasarımını kendim hazırladım. WordPress'te onlarca tema var; fakat size sağladığı esneklik payı da bir yerden sonra bitiyor.</p>
+    <img src="notepad.jpg" alt="Notepad++ logo" style="margin: auto" />
+</a>
+<p>İkinci olarak lütfen Notepad++ adlı programı indirin. <a href="http://notepad-plus-plus.org/" target="_blank">Notepad++</a>, Windows kullanıcılarının yakından bildiği Notepad metin editörünün geliştirilmiş bir versiyonudur. PHP, ASP, C#, HTML, XML, CSS, Python gibi birçok dilin kodlarını renkli bir şekilde gösterebilir ve kod yazımında kolaylık sağlar. Karmaşık gibi gözükmesine rağmen Notepad gibi oldukça basit bir programdır.</p>
+
+<p>Bu ve bundan sonraki birçok dersimizde Visual Studio'ya geçmeden önce Notepad++'ı kullanacağız.</p>
+
+<p>Şimdi yavaş yavaş kavramları incelemeye başlayalım:</p>
+
+<p><span class="definition">www: </span><em>World Wide Web</em> (Dünya Çapında Ağ) kelimerinin kısaltılmış hâlidir. Alternatif adı W3'dir. Siteleri internete bağlamak için oluşturulmuş bir sistemdir. "Web'de yeni arama motorları" tabirindeki 'Web' kelimesi, WWW'ya ithaf etmektedir.</p>
+
+<p><span class="definition">W3C: </span><em>World Wide Web Consortium</em> kelimelerinin kısaltmasıdır. Web'in standartlarını belirleyen ve geliştiren uluslararası bir topluluktur.</p>
+
+<p><span class="definition">HTML: </span><em>HyperText Markup Language</em> (Zengin Metin İşaretleme Dili) kelimelerinin kısaltılmış halidir. Web sayfalarını görüntülemekte kullanılan ana işaretleme dilidir.</p>
+
+<p>Basit bir HTML örneği:</p>
+
+<div class="pre">
+    <pre class="brush: xml;">
+&lt;html>
+     &lt;head>
+         &lt;title>Başlık&lt;/title>
+     &lt;/head>
+     &lt;body>
+         &lt;p>Bu bir deneme yazısıdır.&lt;/p>
+     &lt;/body>
+&lt;/html>
+</pre>
+</div>
+<img src="xml.jpg"alt="xml" style="width: 200px; height: 200px;"/>
+<p><span class="definition">XML: </span>Açılımı <em>eXtensible Markup Language</em> (Genişletilebilir İşaretleme Dili) şeklindedir. Hem insanların hem de makinelerin okuyabilmesi adına kodlama dosyaları için geliştirilen bir işaretleme dilidir. XML etiketleri HTML'in tersine kullanıcı tarafından özel olarak tanımlanabilir. İnternet sitelerinde site haritalarını oluşturmak için sıkça kullanılır.</p>
+
+<p>Basit bir XML örneği:</p>
+
+<div class="pre">
+    <pre class="brush: xml;">
+&lt;?xml version="1.0" encoding="UTF-8"?>
+&lt;cicekler>
+    &lt;cesit>papatya&lt;/cesit>
+    &lt;cesit>kardelen&lt;/cesit>
+    &lt;cesit>karanfil&lt;/cesit>
+&lt;/cicekler>
+</pre>
+</div>
+
+<p><span class="definition">XHTML: </span><em>eXtensible HTML</em> (Genişletilebilir HTML) kelimelerinin kısaltılmışıdır. XML ve HTML'in kompozit hâlidir. HTML'deki fazla esnek yapı yüzünden oluşan hataları en aza indirmek için W3C tarafından geliştirilmiştir.</p>
+
+<p><span class="definition">Domain: </span>Alternatif ismi "alan adı"dır. Web sitelerinin internet üzerindeki adıdır. Örneğin; zinzinzibidi.com bir domain'dir. Temelinde bir IP adresi vardır. Kullanıcıların bu IP adresini yazıp sitelere erişmesi zor olduğu için böyle bir sistem geliştirilmiştir.</p>
+
+<p><span class="definition">Hosting: </span>Alan adlarının 7/24 Web'de erişilebilmesi için çeşitli firmalar tarafından sağlanan hizmet, hosting olarak adlandırılır. Hosting firmalarının sabah akşam hiç kapatılmadan çalışan server'ları, diğer bir ifade ile sunucuları vardır. Web sitesi sahibi oluşturduğu site dökümanlarını bu sunuculara gönderir ve yaptığı sitenin tüm dünya tarafından ziyaret edilmesine olanak tanır.</p>
+
+<p><span class="definition">HTTP: </span><em>HyperText Transfer Protocol</em> (Zengin Metin Transfer Protokolü) kelimelerinin kısaltmasıdır. Site adlarında www'dan önce http:// şeklinde yazılır. Adından da anlaşılacağı üzere sitelerin ekranımızda görüntülenmesi için W3C tarafından oluşturulan bu protokol esas alınır. Bir web sitesi ile sunucu arasındaki veri transferini belli standartlara oturtmak için geliştirilmiştir. Bu transferin daha güvenli bir versiyonu olan HTTPS (HTTP Secure) bugün tüm ticarî alışveriş sitelerinde veri güvenliğini sağlamak amacıyla kullanılmaktadır.</p>
+
+<p><span class="definition">FTP: </span>Açılımı <em>File Transfer Protocol</em> (Dosya Transfer Protokolü) şeklindedir. Web sitesi sahibinin oluşturduğu site dosyalarını sunucuya gönderebilmesi amacıyla oluşturulmuş bir protokoldür. Web sitesi sahiplerinin sunuculara ulaşabilmesi oluşturulmuş FTP yazılımları geliştirilmiştir. SmartFTP, CuteFTP gibi birçok yazılım olsa da bunlar arasında en popüler FileZilla adlı yazılımdır. Kullanımı oldukça basittir.</p>
+
+<p>HTTP, ziyaretçi ~ sunucu <small>(visitor ~ server)</small> arasındaki ilişkiyi belirlerken; FTP, site sahibi ~ sunucu <small>(client ~ server)</small> arasındaki ilişkiyi belirler.</p>
+
+<p><span class="definition">SEO: </span><em>Search Engine Optimization</em> (Arama Motoru Optimizasyonu) kelimelerinin kısaltmasıdır. Sitelerin arama motorları tarafından index'lenebilmesi için HTML etiketleri içine yazılan bazı tanımlamalar dahilinde yapılır. SEO konusu başlı başına bir inceleme alanıdır ve ileride bu konuya değineceğiz.</p>
+
+<p><span class="definition">HTML Etiketi: </span>&lt; ve &gt; şeklinde gördüğünüz köşeli parantezler içine yazılır. Örneğin; &lt;title> bir etikettir. &lt;/title> ifadesi etiketin kapatıldığını belirtir.</p>
+</a>
+
+<h1>Temel HTML Etiketleri ve Kurallar</h1>
+
+<p>Bu dersimizde bir önceki dersimizde gördüğümüz basit HTML yapısını inceleyeceğiz ve HTML'deki önemli bazı kuralları öğreneceğiz.</p>
+
+<p>İlk olarak basit bir HTML örneğini ele alalım:</p>
+
+<div class="pre">
+    <pre class="brush: xml;">
+&lt;html>
+     &lt;head>
+         &lt;title>Başlık&lt;/title>
+     &lt;/head>
+     &lt;body>
+         &lt;p>Bu bir deneme yazısıdır.&lt;/p>
+     &lt;/body>
+&lt;/html>
+    </pre>
+</div>
+
+<p>Bu örneği daha da basite indirgeyeyim:</p>
+
+<div class="pre">
+    <pre class="brush: xml;">
+&lt;html>
+     &lt;head>&lt;/head>
+     &lt;body>&lt;/body>
+&lt;/html>
+    </pre>
+</div>
+
+<p>Her şey daha açık bir hâl aldı. Yazdığım &lt;html&gt; etiketinin içinde head ve body adlı iki farklı element daha olduğunu göreceksiniz. Ayrıca klavyemizdeki Caps Lock tuşunun bir üstündeki Tab tuşuna basarak head ve body'nin html etiketinin içinde yazıldığına dikkatinizi çekmek isterim. Açıkçası bunu yapmayabilirdim; ama yapmamdaki amacım HTML'deki hiyerarşik yapıyı sizlere öğretmek.</p>
+
+<p>Tüm HTML etiketleri &lt;örnek&gt; şeklinde açılır ve köşeli parantezlerin içine yazdığınız "etiket adı"nın başına / (slash) işareti yazılarak kapatılır. Böylece "örnek" etiketini kapalı hâli &lt;/örnek&gt; şeklindedir. &lt;örnek&gt;'i açma etiketi olarak, &lt;/örnek&gt; şeklinde yazılanı ise kapatma etiketi olarak adlandırabiliriz. Ayrıca bir kısım HTML üstadları 'etiket' yerine 'element' terimini kullanmayı tercih etmektedir. Bu da aklınızda olsun.</p>
+
+<p>HTML etiketinin açılım ve kapatım şekli bazı istisnalar dışında daima böyledir. Yazmak istediğimiz içerik daima açılım ve kapatım etiketlerinin içindeki boş alana yazılır.</p>
+
+<p>Şimdi tekrar daha da basite indirgenmiş örneğimize dönelim:</p>
+
+<p>html açma etiketi ile kapatma etiketi arasında head ve body etiketlerinin olduğunu görüyorsunuz. head ve body'nin ise aynı satır düzeyinde yer aldıklarını... head İngilizce'de baş, body ise gövde anlamına gelmektedir. Bu da bize HTML'in bir iskelet yapısı olduğunu gösterir. html etiketini bir insan vücudu; body ve head'in ise bu vücudun başı ve gövdesi olduğunu düşünebilirsiniz.</p>
+
+<p>&lt;head> etiketi daima &lt;html> etiketinin içinde yer alır ve &lt;head&gt;'in içerisine yazılan &lt;title&gt; dışındaki tüm içerik kullanıcı tarafından görülmez. &lt;body&gt;'in içine yazılan içerik neyse tarayıcı ekranında o görülecektir.</p>
+
+<p>&lt;title&gt; sayfa başlığı anlamındadır. Örneğin şu an tarayıcınızın sekmesindeki başlığın "Temel HTML etiketleri ve Kurallar" şeklinde başlayan bir yazı oldunu göreceksiniz:</p>
+
+<p>Bu da aslında pencere içeriğinde görülmez; fakat bir istisna olarak kabul edilebilir.</p>
+
+<p>HTML5'teki hiyararşik yapıyı tam olarak anlamadıysanız aşağıdaki hatalı HTML kodlarını inceleyiniz:</p>
+
+<div class="pre">
+    <pre class="brush: xml;">
+&lt;head>
+    &lt;title>Site Başlığı&lt;/title>
+&lt;/head>
+&lt;html>
+    &lt;body>Site İçeriği&lt;/body>
+&lt;/html>
+    </pre>
+</div>
+
+<div class="pre">
+    <pre class="brush: xml;">
+&lt;html>
+    &lt;head>
+         &lt;title>Site Başlığı&lt;/title>
+    &lt;/head>
+    &lt;body>Site içeriği
+&lt;/html>
+    &lt;/body>
+    </pre>
+</div>
+
+<p>İlk örnekteki hata head elementinin html etiketinin dışına yazılmış olması. Unutmayın ki HTML5'teki tüm etiketler daima &lt;html> etiketinin içine yazılır.</p>
+
+<p>
+    İkinci örnekteki hata biraz daha komplike. body'nin kapatma etiketi html'in dışına yazılmış ve bu da yanlış kodlama örneklerinden biri. Yine unutmayın ki iki HTML5 etiketi asla ve asla birbirleri ile kesişmezler.<br />
+    Yani &lt;a etiketi>&lt;b etiketi>&lt;/a etiketi>&lt;/b etiketi> şeklinde bir yazım yoktur.<br />
+    Doğrusu &lt;a etiketi>&lt;b etiketi>&lt;/b etiketi>&lt;/a etiketi> şeklindedir.
+</p>
+
+<p>
+    Sayfanın başındaki ilk örneğe dönelim.
+<p>adlı bir etiket göreceksiniz. Bu etiket HTML5'te içerik eklenirken en sık kullanılan elementlerden biridir. Paragraf kelimesinin kısaltmasıdır.</p>
+
+<p>Şimdi ilk web sayfanızı nasıl yapacağınızı anlatacağım.</p>
+
+<p>Notepad++'ı açın. Yeni bir sayfa oluşturun. Sayfa tamamen boş olsun. İçine aşağıdaki kodları yazın. Ama lütfen kopyala / yapıştır yapmayın. Tek tek yazın.</p>
+
+<div class="pre">
+    <pre class="brush: xml;">
+&lt;html>
+     &lt;head>
+         &lt;title>[Site başlığım buraya]&lt;/title>
+     &lt;/head>
+     &lt;body>
+         &lt;p>[İçerik buraya]&lt;/p>
+     &lt;/body>
+&lt;/html>
+    </pre>
+</div>
+
+<p>Hiyararşik yazmaya özen gösterin. Örneğin; &lt;html> yazdıktan sonra enter'a basın. Daha sonra tab tuşu ile boşluk bırakın ve kodun kalan kısmını yazın. [Site başlığım buraya] kısmına kendi adınızı ya da rumuzunuzu yazabilirsiniz. [İçerik buraya] kısmına ise yazmak istediklerinizi yazın.</p>
+
+<p>Her şey bittikten sonra Notepad++'ın menüsünden Dosya > Farklı Kaydet...'e tıklayınız. File name kısmına istediğiniz dosya adını yazınız ve Save as type kısmındaki açılır menüden Hyper Text Markup Language file'ı seçiniz.</p>
+
+<p>Eğer son yazdıklarımı yapamadıysanız üzülmeyin. Dosyanızı txt dosyası şeklinde masaüstüne kaydediniz ve uzantısındaki .txt'yi siliniz. Yerine .html yazınız.</p>
+
+<p>Şimdi kaydettiğiniz dosyaya dönünüz ve Birlikte aç komutundan Google Chrome'u seçiniz. Daha sonra dosyanızı açınız.</p>
+
+<p>Tebrikler! İlk web sayfanızı oluşturdunuz. Her şey bu kadar kolay.</p>
+<div class="card">
+  <img src="foto2.jpg" alt="Avatar" style="width:250px; height: 250px;">
+  <div class="container">
+    <h4><b>Muhammed Aktan</b></h4> 
+    <p>Website designer</p> 
+  </div>
+</div>
+</div>
+<div class="footer">
+ <h2><a href="https://www.facebook.com/muhammet.aktan" class="fa fa-facebook"></a>
+<a href="https://twitter.com/yessaykonocry" class="fa fa-twitter"></a>
+<a href="https://instagram.com/leaderofarmy" class="fa fa-instagram"></a></h2>
+</div>
+<button onclick="topFunction()" id="myBtn" title="Go to top">Başa Dön</button>
+<script>
+// When the user scrolls the page, execute myFunction 
+window.onscroll = function() {myFunction()};
+
+function myFunction() {
+  var winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+  var height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+  var scrolled = (winScroll / height) * 100;
+  document.getElementById("myBar").style.width = scrolled + "%";
+}
+// When the user scrolls down 20px from the top of the document, show the button
+window.onscroll = function() {scrollFunction()};
+
+function scrollFunction() {
+  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+    document.getElementById("myBtn").style.display = "block";
+  } else {
+    document.getElementById("myBtn").style.display = "none";
+  }
+}
+
+// When the user clicks on the button, scroll to the top of the document
+function topFunction() {
+  document.body.scrollTop = 0;
+  document.documentElement.scrollTop = 0;
+}
+</script>
+</body>
+</html>
